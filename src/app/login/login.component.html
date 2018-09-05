@@ -1,0 +1,48 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <div class="login-register" style="background-image: url('assets/images/background/login-register.jpg');">
+      <div class="login-register-box">
+          <mat-card class="example-card">
+            <div class="text-center">
+              <mat-card-content>
+                  <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo">
+                  <mat-card-title>Iniciar session</mat-card-title>
+                  <mat-card-subtitle>App web tobara</mat-card-subtitle>
+                  <mat-divider></mat-divider>
+                  <br>
+                  <br>
+                  <mat-form-field hintLabel="Usuario o correo electronico">
+                      <input matInput #input maxlength="10" placeholder="Usuario">
+                  </mat-form-field>
+                  <br>
+                  <br>
+                    <mat-form-field>
+                        <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                      </mat-form-field>
+                      
+                      <mat-grid-list cols="4" rowHeight="100px">
+                          <mat-grid-tile  [colspan]=2
+                              [rowspan]=1>
+                              <mat-checkbox>Recordar!</mat-checkbox>
+                          </mat-grid-tile>
+                          <mat-grid-tile  [colspan]=2
+                              [rowspan]=1>
+                              <a href="">Olvide contraseña</a>
+                          </mat-grid-tile>
+                        </mat-grid-list> 
+
+                        <button mat-button color="accent" style="width:80%">iniciar sesión</button>
+                    
+                 <p>
+                  ¿Aun no te regitras?  <a href="">Presiona aqui!!</a>
+                </p> 
+
+              </mat-card-content>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
