@@ -19,7 +19,7 @@ $accent: mat-palette($mat-indigo, 500);
 $warn: mat-palette($mat-pink, 500);
 $theme: mat-light-theme($primary, $accent, $warn);
 
-$custom-primary: mat-palette($mat-blue-gray,100);
+$custom-primary: mat-palette($mat-blue-gray,50);
 $custom-accent: mat-palette($mat-red);
 
 $custom-theme: mat-light-theme($custom-primary, $custom-accent);
