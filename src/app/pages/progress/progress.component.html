@@ -1,3 +1,36 @@
-<p>
-  progress works!
-</p>
+<h3 class="example-h2">Result</h3>
+
+    <section class="example-section">
+      <mat-progress-bar
+          class="Primary"
+          color="accent"
+          mode="determinate"
+          [value]="value1"
+          [bufferValue]="bufferValue">
+      </mat-progress-bar>
+    </section>
+    <br>
+    <section class="example-section">
+            <mat-progress-bar
+                class="Primary"
+                color="primary"
+                mode="determinate"
+                [value]="value2"
+                [bufferValue]="bufferValue">
+            </mat-progress-bar>
+          </section>
+
+    <mat-grid-list cols="4" rowHeight="140px" class="vm">
+        <mat-grid-tile  [colspan]=2  [rowspan]=1>
+            <app-incrementador (cambioValue)="value1 = $event" leyenda="Progreso primario" [value]="value1"></app-incrementador>
+        </mat-grid-tile>
+        <mat-grid-tile  [colspan]=2  [rowspan]=1>
+                <app-incrementador (cambioValue)="value2 = $event" leyenda="Progreso secundario" [value]="value2"></app-incrementador>
+        </mat-grid-tile>
+    </mat-grid-list> 
+
+<!-- 
+    <section class="example-section" *ngIf="mode === 'determinate' || mode === 'buffer'">
+        <label class="example-margin">Progress:</label>
+        <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+      </section> -->

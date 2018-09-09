@@ -1,3 +1,18 @@
-<p>
-  grafico1 works!
-</p>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <app-grafico-dona [chartLabels]="graficos.grafico1.labels" [chartData]="graficos.grafico1.data" [chartType]="graficos.grafico1.type" [leyenda]="graficos.grafico1.leyenda">
+    </app-grafico-dona>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-grafico-dona [chartLabels]="graficos.grafico2.labels" [chartData]="graficos.grafico2.data" [chartType]="graficos.grafico2.type" [leyenda]="graficos.grafico2.leyenda">
+    </app-grafico-dona>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-grafico-dona [chartLabels]="graficos.grafico3.labels" [chartData]="graficos.grafico3.data" [chartType]="graficos.grafico3.type" [leyenda]="graficos.grafico3.leyenda">
+    </app-grafico-dona>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-grafico-dona [chartLabels]="graficos.grafico4.labels" [chartData]="graficos.grafico4.data" [chartType]="graficos.grafico4.type" [leyenda]="graficos.grafico4.leyenda">
+    </app-grafico-dona>
+  </mat-grid-tile>
+</mat-grid-list>
