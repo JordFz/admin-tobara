@@ -4,19 +4,19 @@
             <h3 mat-subheader style="color: #E8EFF7">Perfil</h3>
             <mat-list-item>
                 <mat-icon mat-list-icon>person</mat-icon>
-                <h4 mat-line >Admin</h4>
-                <p mat-line  > Conexión </p>
+                <h4 mat-line>Admin</h4>
+                <p mat-line> Conexión </p>
                 <a mat-line [matMenuTriggerFor]="sdprofile">
-                        Markarn Doe
-                        
+                    Markarn Doe
+
                 </a>
             </mat-list-item>
-            
+
             <mat-divider></mat-divider>
         </mat-list>
 
 
-       
+
     </div>
     <mat-menu #sdprofile="matMenu" class="mymegamenu">
         <button mat-menu-item>
@@ -30,18 +30,16 @@
     </mat-menu>
 
 </div>
-<mat-nav-list appAccordion>
-
-    <h3 mat-subheader style="color: #E8EFF7">Administracion</h3>
-    <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" >
-        <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'admin'">
-            <mat-icon  mat-list-icon>{{ menuitem.icon }}</mat-icon> 
-            <span mat-line>{{ menuitem.name }}</span> 
-            <span fxFlex></span> 
-            <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span> 
-        </a> 
-
-        
-    </mat-list-item>
-
+<mat-nav-list appAccordion *ngFor="let menuitem of _sidebar.menu">
+    <div *ngIf="menuitem.type === 'admin'">
+        <h3 mat-subheader style="color: #E8EFF7">{{menuitem.titulo}}</h3>
+        <mat-list-item appAccordionLink *ngFor="let submenu of menuitem.submenu">
+            <a class="" appAccordionToggle [routerLink]="['/', submenu.state]">
+                <mat-icon mat-list-icon>{{ submenu.icon }}</mat-icon>
+                <span mat-line>{{ submenu.name }}</span>
+                <span fxFlex></span>
+                <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+            </a>
+        </mat-list-item>
+    </div>
 </mat-nav-list>

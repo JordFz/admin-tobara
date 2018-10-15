@@ -15,6 +15,9 @@ import { APP_ROUTES } from './app.routing';
 import { RegisterComponent } from './login/register.component';
 import { PagesModule } from './pages/pages.module';
 
+//SERVICIOS
+import { ServiceModule } from "./services/service.module";
+
 
 
 
@@ -32,7 +35,8 @@ import { PagesModule } from './pages/pages.module';
     HttpClientModule,
     FormsModule,
     PagesModule,
-    APP_ROUTES
+    APP_ROUTES,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

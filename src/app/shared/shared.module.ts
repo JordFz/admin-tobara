@@ -32,7 +32,8 @@ import { PAGES_ROUTES } from "../pages/pages.routes";
         BrowserAnimationsModule,
         MaterialComponent,
         HttpClientModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        RouterModule
     ],
     providers: [MenuItems]
 })

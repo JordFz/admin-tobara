@@ -11,6 +11,7 @@
                   <mat-divider></mat-divider>
                   <br>
                   <br>
+                  <form (ngSubmit)="ingresar()">
                   <mat-form-field hintLabel="Usuario o correo electronico">
                       <input matInput #input maxlength="10" placeholder="Usuario">
                   </mat-form-field>
@@ -33,7 +34,7 @@
                         </mat-grid-list> 
 
                         <button mat-button color="accent" style="width:80%">iniciar sesión</button>
-                    
+                      </form>
                  <p>
                   ¿Aun no te regitras?  <a href="">Presiona aqui!!</a>
                 </p> 
