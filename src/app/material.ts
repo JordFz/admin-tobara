@@ -5,7 +5,8 @@ import {MatButtonModule, MatCheckboxModule
       ,MatCardModule
       ,MatGridListModule
       ,MatProgressBarModule
-      ,MatSliderModule
+      ,MatSliderModule,
+      MatExpansionModule
     } from '@angular/material';
 import { NgModule } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
@@ -24,7 +25,8 @@ import {MatInputModule} from '@angular/material/input';
             MatCardModule,
             MatGridListModule,
             MatProgressBarModule,
-            MatSliderModule
+            MatSliderModule,
+            MatExpansionModule
           ],
   exports: [MatButtonModule, 
             MatCheckboxModule, 
@@ -37,7 +39,8 @@ import {MatInputModule} from '@angular/material/input';
             MatCardModule,
             MatGridListModule,
             MatProgressBarModule,
-            MatSliderModule
+            MatSliderModule,
+            MatExpansionModule
           ],
 })
 export class MaterialComponent { }

@@ -9,6 +9,20 @@ import { SidebarService } from '../../services/service.index';
   styles: []
 })
 export class SidebarComponent implements OnInit {
+  step = 0;
+
+    setStep(index: number) {
+      this.step = index;
+    }
+  
+    nextStep() {
+      this.step++;
+    }
+  
+    prevStep() {
+      this.step--;
+    }
+
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
 

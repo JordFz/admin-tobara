@@ -32,14 +32,27 @@
 </div>
 <mat-nav-list appAccordion *ngFor="let menuitem of _sidebar.menu">
     <div *ngIf="menuitem.type === 'admin'">
-        <h3 mat-subheader style="color: #E8EFF7">{{menuitem.titulo}}</h3>
-        <mat-list-item appAccordionLink *ngFor="let submenu of menuitem.submenu">
-            <a class="" appAccordionToggle [routerLink]="['/', submenu.state]">
-                <mat-icon mat-list-icon>{{ submenu.icon }}</mat-icon>
-                <span mat-line>{{ submenu.name }}</span>
-                <span fxFlex></span>
-                <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
-            </a>
-        </mat-list-item>
+
+        <mat-expansion-panel  class="dark-sidebar pl-xs example-sidenav"  [expanded]="step === 1" (opened)="setStep(0)" hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                        <h3 mat-subheader style="color: #E8EFF7">{{menuitem.titulo}}</h3>
+                </mat-panel-title>
+                <mat-panel-description>
+                    
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <mat-list-item appAccordionLink *ngFor="let submenu of menuitem.submenu">
+                    <a class="" appAccordionToggle [routerLink]="['/', submenu.state]">
+                        <mat-icon mat-list-icon>{{ submenu.icon }}</mat-icon>
+                        <span mat-line>{{ submenu.name }}</span>
+                        <span fxFlex></span>
+                        <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+                    </a>
+                </mat-list-item>
+        </mat-expansion-panel>
+   
+        
     </div>
 </mat-nav-list>

@@ -12,7 +12,9 @@ export class SidebarService {
     submenu: [
       {state: 'dashboard', type: 'admin', name: 'Buttons', icon: 'crop_7_5'},
       {state: 'graficas1', type: 'admin', name: 'Lists', icon: 'view_list'},
-      {state: 'progress', type: 'admin', name: 'Expansion Panel', icon: 'vertical_align_center'}
+      {state: 'progress', type: 'admin', name: 'Expansion Panel', icon: 'vertical_align_center'},
+      {state: 'promesas', type: 'admin', name: 'Promesas', icon: 'vertical_align_center'},
+      {state: 'rxjs', type: 'admin', name: 'RXJS', icon: 'vertical_align_center'}
     ]
 
   }];
